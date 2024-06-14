@@ -1,0 +1,25 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts",
+    "app/modal.jsx",
+    "app/+not-found.jsx",
+    "app/+html.jsx",
+    "app/_layout.tsx",
+    "app/(tabs)/admin.jsx",
+    "app/(tabs)/index.jsx",
+    "app/(tabs)/_layout.jsx",
+    "constants/Colors.js",
+    "components/ExternalLink.jsx",
+    "components/EditScreenInfo.jsx"
+  ]
+}
