@@ -4,19 +4,23 @@ import { signIn } from "../firebase-config";
 import { Stack, router } from "expo-router";
 
 export default function SignInScreen() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState(""); // This is a hook that stores the email entered by the user
+  const [password, setPassword] = useState(""); // This is a hook that stores the password entered by the user
 
+  // This function handles signing in the user
   const handleSignIn = async () => {
+    // This tries to sign in the user
     try {
-      const user = await signIn(email, password);
+      const user = await signIn(email, password); // This signs in the user with the email and password
+      // This checks if the user is signed in
       if (user) {
         // User is signed in.
         console.log(user);
-        router.replace("/admin");
+        router.replace("/admin"); // This navigates to the admin screen
       }
     } catch (error) {
-      Alert.alert("Error signing in", error.message);
+      // An error occurred.
+      Alert.alert("Error signing in", error.message); // This displays an alert with the error message
     }
   };
 

@@ -14,20 +14,10 @@ export default function CalendarScreen() {
       const data = snapshot.val();
 
       console.log("data", data);
-
-      // const markedDates = {};
-      // if (data) {
-      //   Object.values(data).forEach(booking => {
-      //     markedDates[booking.startDate.split("T")[0]] = {
-      //       marked: true,
-      //       dotColor: "black"
-      //     };
-      //   });
-      // }
-
-      // setBookings(markedDates);
     });
   }, []);
+
+
 
   return (
     <View style={styles.container}>
